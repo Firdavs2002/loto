@@ -158,9 +158,3 @@ h1 {
 .counter {
   margin: 10px 0;
 }
-
-.circle {
-  position: absolute;
-  border-radius: 50%;
-  cursor: pointer;
-}
