@@ -1,31 +1,34 @@
 const startBtn = document.querySelector('#start')
 const barrelList = document.querySelector('#barrel-list')
 const barrelsEl = document.querySelector('.barrels')
+const barrelEl = document.querySelector('.barrel-value')
+const countEl = document.querySelector('.count')
+const curretCountEl = document.querySelector('.current-count')
+const barrelSend = document.querySelector('.send')
 const barrelBtn = document.querySelector('#choose-new-barrel')
 const board = document.querySelector('#board')
 const screens = document.querySelectorAll('.screen')
 const currentBarrel = screens[2].querySelector('.current-barrel')
 const colors = ['#63DD8D', '#FFEC73', '#8F6DD7', '#FF8973', '#62B4CF']
 
-let interval
 let barrel = 0
 let barrels = []
 let barrelsChoose = []
 let barrelsChooses = {}
-let score = 0
+let count = 0
 
 startBtn.addEventListener('click', event => {
   event.preventDefault()
   screens[0].classList.add('up')
+  // barrelEl.focus()
 })
 
-barrelList.addEventListener('click', event => {
-  if (event.target.classList.contains('barrel-btn')) {
-    barrel = +event.target.dataset.barrel 
-    barrels[barrel-1] = barrel
-    screens[1].classList.add('up')
-    chooseBarrel()
-  }
+barrelSend.addEventListener('click', () => {
+  barrel = +barrelEl.value
+  barrels[barrel-1] = barrel
+  screens[1].classList.add('up')
+  countEl.textContent = barrelEl.value
+  chooseBarrel()
 })
 
 function chooseBarrel() {
@@ -42,6 +45,7 @@ barrelBtn.addEventListener('click', () => {
   }
   const random = randomChooseBarrel(barrels)
   currentBarrel.textContent = random
+  curretCountEl.textContent = ++count
   barrelsChoose.push(random)
   delete barrelsChooses[random]
   barrels = barrels.filter(b => b !== random)

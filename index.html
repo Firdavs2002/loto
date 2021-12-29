@@ -14,27 +14,21 @@
 
     <div class="screen">
       <h1>Сколько бочек?)</h1>
-      <ul class="barrel-list" id="barrel-list">
-        <li>
-          <button class="barrel-btn" data-barrel="50">
-            50 шт.
-          </button>
-        </li>
-        <li>
-          <button class="barrel-btn" data-barrel="100">
-            100 шт.
-          </button>
-        </li>
-        <li>
-          <button class="barrel-btn" data-barrel="150">
-            150 шт.
-          </button>
-        </li>
-      </ul>
+      <div class="input">
+        <input type="number" class="barrel-btn barrel-value" placeholder="укажите тут ..." >
+        <button class="barrel-btn send" >
+          Ok
+        </button>
+      </div>
     </div>
 
     <div class="screen">
       <h3>Идет игра</h3>
+      <div class="counter">
+        <span class="current-count">0</span>
+        /
+        <span class="count"></span>
+      </div>
       <div class="board" id="board">
         <div class="current-barrel" id="currentBarrel">
           -
