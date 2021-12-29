@@ -20,7 +20,6 @@ let count = 0
 startBtn.addEventListener('click', event => {
   event.preventDefault()
   screens[0].classList.add('up')
-  // barrelEl.focus()
 })
 
 barrelSend.addEventListener('click', () => {
