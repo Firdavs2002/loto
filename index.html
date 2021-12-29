@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Игра | Лото</title>
+  </head>
+  <body>
+    <div class="screen">
+      <h1>Играем в Лото :)</h1>
+      <a href="#" class="start" id="start">Начать игру</a>
+    </div>
+
+    <div class="screen">
+      <h1>Сколько бочек?)</h1>
+      <ul class="barrel-list" id="barrel-list">
+        <li>
+          <button class="barrel-btn" data-barrel="50">
+            50 шт.
+          </button>
+        </li>
+        <li>
+          <button class="barrel-btn" data-barrel="100">
+            100 шт.
+          </button>
+        </li>
+        <li>
+          <button class="barrel-btn" data-barrel="150">
+            150 шт.
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="screen">
+      <h3>Идет игра</h3>
+      <div class="board" id="board">
+        <div class="current-barrel" id="currentBarrel">
+          -
+        </div>
+        <div class="barrels"></div>
+      </div>
+      <button class="barrel-btn" id="choose-new-barrel">
+        Выбрать новую бочку
+      </button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
